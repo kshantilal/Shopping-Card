@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shopping List</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+</head>
+<body>
+	<h1>Shopping List</h1>
+	<div id="Device">
+		<div>
+			<form>
+				<label for="AddItem">Add an item to the list</label>
+				<input type="text" id="AddItem" name="">
+				<input type="submit" id="Submit" name="">
+
+			</form>
+			<div id="List1">
+				<label>Need to buy</label>
+				<ul id="NeedToShop" class="lists">
+					<li>Item1</li>
+				</ul>
+			</div>
+			<div id="List2">
+				<label>In Cart</label>
+				<ul id="InCart" class="lists">
+					<li>Apples</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+		
+
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> <!-- Normal J-Query -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> <!-- This UI needs to be under the main J-Query script -->
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
