@@ -5,11 +5,17 @@ $(document).ready(function(){
 		event.preventDefault();
 		var Value = $("#AddItem").val();
 		
+		//Gets the error
+		$(this).parent().find('span');
+		var errors = $(this).parent().find('#error')
+		errors.empty();
 		if ($('#AddItem').val().length === 0) {
-			$('#AddItem').parent().find('#error').text("This field is required").addClass('redError');
+			$('#AddItem').parent().find('#error').text("*Please enter an Item").addClass('redError');
 			return;
 		}
-
+		Valid = true;
+		
+		// Gets the value that is in #AddItem and appends it into the list
 		$("#NeedToShop").append("<li>"+Value+"</li>");
 		$("#AddItem").val("");
 
@@ -27,7 +33,7 @@ $(document).ready(function(){
 		drop: function (event, ui){
 			ui.draggable.addClass("green");
 			ui.draggable.removeClass("red");
-			
+
 		}
 
 	});
@@ -37,22 +43,20 @@ $(document).ready(function(){
 		drop: function (event, ui){
 			ui.draggable.removeClass("green");
 			ui.draggable.addClass("red");
-
 		}
 
 	});
 
 
-	$('#AddItem').blur(function(){
-		$(this).parent().find('span');
-		var errors = $(this).parent().find('#error')
-		errors.empty();
-		if ($(this).val().length === 0) {
-			errors.text("This field is required");
-			return;
-		}
-		Valid = true;
-		
+	$("#Reset").click(function(){
+		var	empty = $("#NeedToShop");
+		empty.empty();
+
+	});
+	$("#Reset1").click(function(){
+		var	empty = $("#InCart");
+		empty.empty();
+
 	});
 
 

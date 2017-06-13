@@ -21,6 +21,7 @@ body{
 	overflow: hidden;
 	padding: 2em; 
 	background-color: #34495E;
+	box-shadow: 5px 5px 5px #888888;
 }
 #title{
 	color: #34495E;
@@ -65,3 +66,9 @@ li{
 .redError{
 	color: #C0392B;
 }
+
+.Green{
+	color: #00B16A;
+
+}
+

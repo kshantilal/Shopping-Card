@@ -7,28 +7,34 @@
 </head>
 	
 	<body>
-	<div id="title">
-		<h1>Shopping List</h1>
-	</div>
+		<div id="title">
+			<h1>Shopping List</h1>
+		</div>
 		<div id="Device">
 			<div>
 				<form>
 					<label for="AddItem">Add an item to the list</label>
 					<input type="text" id="AddItem" name="">
 					<input type="submit" id="Submit" name="">
-					<span id="error"></span>
+					<br><span id="error"></span>
 				</form>
 				<div id="List1">
-					<label>Items Need to buy</label>
+					<label class="redError">Items I Need to buy</label>
 					<ul id="NeedToShop" class="lists">
 						<!-- <li>Item1</li> -->
 					</ul>
+					<form>
+						<input type="reset" id="Reset" value="Reset">
+					</form>
 				</div>
 				<div id="List2">
-					<label>Items in my cart</label>
+					<label class="Green">Items in my cart</label>
 					<ul id="InCart" class="lists">
 						<!-- <li>Apples</li> -->
 					</ul>
+					<form>
+						<input type="reset" id="Reset1" value="Reset">
+					</form>
 				</div>
 			</div>
 		</div>
