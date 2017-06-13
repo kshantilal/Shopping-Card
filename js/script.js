@@ -18,7 +18,7 @@ $(document).ready(function(){
 		
 		
 		// Gets the value that is in #AddItem and appends it into the list
-		$("#NeedToShop").append("<li>"+Value+"</li>");
+		$("#NeedToShop").append("<li>"+value+"</li>");
 		$("#AddItem").val("");
 
 	
