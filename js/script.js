@@ -1,19 +1,21 @@
 $(document).ready(function(){
 
-	var Valid = false;
+	
 	$("#Submit").click(function(){
 		event.preventDefault();
-		var Value = $("#AddItem").val();
+		var value = $("#AddItem").val(); //Finds the value that is being inputed
 		
 		//Gets the error
-		$(this).parent().find('span');
 		var errors = $(this).parent().find('#error')
 		errors.empty();
-		if ($('#AddItem').val().length === 0) {
-			$('#AddItem').parent().find('#error').text("*Please enter an Item").addClass('redError');
+		if (value.length === 0) {
+			errors.text("*Please enter an Item").addClass('redError');
 			return;
-		}
-		Valid = true;
+		}else if (value.length > 20) {
+			errors.text("Must be less than 20 characters").addClass('redError');
+			return;
+		};
+		
 		
 		// Gets the value that is in #AddItem and appends it into the list
 		$("#NeedToShop").append("<li>"+Value+"</li>");
@@ -58,6 +60,41 @@ $(document).ready(function(){
 		empty.empty();
 
 	});
+
+
+	$("#trash").droppable({
+		drop: function(event, ui){
+			ui.draggable.remove("li");
+		}
+
+	});
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }); //Document Ready

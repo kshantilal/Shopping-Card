@@ -72,3 +72,16 @@ li{
 
 }
 
+.reset-button{
+	text-align: center;
+	margin-top: 10px;
+}
+
+#trash{
+	border: 1px solid white;
+	text-align: center;
+	margin: 190px auto;
+	width: 300px;
+	padding: 20px;
+}
+
