@@ -1,18 +1,20 @@
 $(document).ready(function(){
 
+	var Valid = false;
 	$("#Submit").click(function(){
 		event.preventDefault();
 		var Value = $("#AddItem").val();
-		if (Value.length === 0) {
-			alert('Please enter an Item');
+		
+		if ($('#AddItem').val().length === 0) {
+			$('#AddItem').parent().find('#error').text("This field is required").addClass('redError');
 			return;
 		}
 
 		$("#NeedToShop").append("<li>"+Value+"</li>");
 		$("#AddItem").val("");
 
-
-	});
+	
+	}); //Click Function
 
 	$("#NeedToShop, #InCart").sortable({
 		connectWith: ".lists",
@@ -25,7 +27,7 @@ $(document).ready(function(){
 		drop: function (event, ui){
 			ui.draggable.addClass("green");
 			ui.draggable.removeClass("red");
-
+			
 		}
 
 	});
@@ -36,11 +38,22 @@ $(document).ready(function(){
 			ui.draggable.removeClass("green");
 			ui.draggable.addClass("red");
 
-
 		}
 
 	});
 
 
+	$('#AddItem').blur(function(){
+		$(this).parent().find('span');
+		var errors = $(this).parent().find('#error')
+		errors.empty();
+		if ($(this).val().length === 0) {
+			errors.text("This field is required");
+			return;
+		}
+		Valid = true;
+		
+	});
 
-})	;
+
+}); //Document Ready

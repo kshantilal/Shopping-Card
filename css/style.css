@@ -3,11 +3,16 @@
 	margin: 0;
 	box-sizing: border-box;
 }
+body{
+	height: 100%;
+	font-family: 'Avenir', 'Open Sans', 'sans-serif';
+	color: white;
+}
 
 #Device{
 	width: 1024px;
 	height: 600px;
-	border: 10px solid grey;
+	border: 5px solid #95A5A6;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -15,27 +20,34 @@
 	margin-top: -300px;
 	overflow: hidden;
 	padding: 2em; 
+	background-color: #34495E;
+}
+#title{
+	color: #34495E;
+	text-align: center;
+	margin-top: 20px;
 }
 
 li{
 	width: 300px;
 	font-size: 1.2em;
 	padding: 5px;
-	border: 1px solid black;
+	border: 1px solid #BDC3C7;
 	list-style: none;
 }
 
 #List2{
 	float: right;
+	margin-top: 10px;
 }
 #List1{
 	float: left;
+	margin-top: 10px;
 }
 
 #NeedToShop, #InCart{
-	border: 1px solid black;
-	min-height: 20px;
-	padding-top: 5px;
+	border: 1px solid #BDC3C7;
+	min-height: 400px;
 	width: 300px;
 
 }
@@ -48,4 +60,8 @@ li{
 .red{
 	color: white;
 	background-color: #C0392B;
+}
+
+.redError{
+	color: #C0392B;
 }
